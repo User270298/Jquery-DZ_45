@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        .mains{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 50px 20px 50px;
+        }
+
+        .st {
+            padding: 10px 50px 10px 50px;
+            border: 1px solid black;
+            color: aliceblue;
+            font-size: 25px;
+            margin: 5px;
+            text-align: center;
+        }
+        .fruits{
+            display: flex;
+            margin: 20px 50px 20px 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .fruit{
+            text-align: center;
+            padding: 10px 50px 15px 50px;
+            border: 1px solid black;
+            color: aliceblue;
+            font-size: 25px;
+            margin: 10px;
+            width: 90px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="mains">
+        <h2><b>Select color: </b></h2>
+        <div class="red1 st" style="background-color: red;">red</div>
+        <div class="green1 st" style="background-color: green;">green</div>
+        <div class="orange1 st" style="background-color: orange;">orange</div>
+        <div class="yellow1 st" style="background-color: rgb(228, 228, 79);">yellow</div>
+    </div>
+    <hr>
+    <h2 style="text-align: center;"><b>Fruits:</b></h2>
+    <div class="fruits">
+        <div class="fruit red" style="background-color: red;">apple</div>
+        <div class="fruit green" style="background-color: green;">pear</div>
+        <div class="fruit orange" style="background-color: orange;">orange</div>
+        <div class="fruit red" style="background-color: red;">mango</div>
+        <div class="fruit orange" style="background-color: orange;">mandarin</div>
+        <div class="fruit yellow" style="background-color: rgb(228, 228, 79);">pineapple</div>
+        <div class="fruit green" style="background-color: green;">avocado</div>
+        <div class="fruit red" style="background-color: red;">red peper</div>
+        <div class="fruit green" style="background-color: green;">green peper</div>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        // let fruits=['apple', 'pear', 'orange', 'mango', 'mandarin', 'pineapple', 'avocado', 'red peper', 'green peper']
+        // let back=['red', 'green', 'orange', 'red', 'orange', 'rgb(228, 228, 79)', 'green', 'red', 'green']
+        $('.red1').on('click', function(){
+            $('.red').css('box-shadow', '8px 8px 8px 8px rgba(0,0,0,0.8)')
+            $('.green').css('box-shadow', 'none')
+            $('.orange').css('box-shadow', 'none')
+            $('.yellow').css('box-shadow', 'none')
+        })
+        $('.green1').on('click', function(){
+            $('.green').css('box-shadow', '8px 8px 8px 8px rgba(0,0,0,0.8)')
+            $('.red').css('box-shadow', 'none')
+            $('.orange').css('box-shadow', 'none')
+            $('.yellow').css('box-shadow', 'none')
+        })
+        $('.orange1').on('click', function(){
+            $('.orange').css('box-shadow', '8px 8px 8px 8px rgba(0,0,0,0.8)')
+            $('.green').css('box-shadow', 'none')
+            $('.red').css('box-shadow', 'none')
+            $('.yellow').css('box-shadow', 'none')
+        })
+        $('.yellow1').on('click', function(){
+            $('.yellow').css('box-shadow', '8px 8px 8px 8px rgba(0,0,0,0.8)')
+            $('.green').css('box-shadow', 'none')
+            $('.orange').css('box-shadow', 'none')
+            $('.red').css('box-shadow', 'none')
+        })
+        
+    </script>
+</body>
+
+</html>

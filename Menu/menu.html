@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src=""></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        .panel{
+            display: flex;
+
+        }
+        h2 {
+            color: aliceblue;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            padding-left: 7px;
+        }
+
+        .grey {
+            background-color: grey;
+            padding: 20px;
+            width: 80px;
+        }
+        .cont{
+            color: aliceblue;
+            width: 160px;
+            height: 60px;
+            padding-left: 27px;
+            padding-bottom: 4.5px;
+            background-color: grey;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="panel">
+        <div class="grey">
+            <h2>MENU</h2>
+            <p></p>
+            <p><img src="edit.png" alt=""></p>
+            <p><img src="favorites.png" alt=""></p>
+            <p><img src="history.png" alt=""></p>
+            <p><img src="security.png" alt=""></p>
+            <p><img src="settings.png" alt=""></p>
+        </div>
+        <div class="continue">
+            <p class="cont"></p>
+            
+            <p class="cont">EDIT</p>
+            <p class="cont">FAVORITES</p>
+            <p class="cont">HISTORY</p>
+            <p class="cont">SECURITY</p>
+            <p class="cont">SETTING</p>
+        </div>
+    </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $('.grey').on('mousemove', function(){
+            $('.cont').css('display', 'block')
+        })
+        $('.grey').on('mouseout', function(){
+            $('.cont').css('display', 'none')
+        })
+        $('.continue').on('mousemove', function(){
+            $('.cont').css('display', 'block')
+        })
+        $('.continue').on('mouseout', function(){
+            $('.cont').css('display', 'none')
+        })
+
+    </script>
+</body>
+
+</html>
